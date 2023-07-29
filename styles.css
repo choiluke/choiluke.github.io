@@ -1,25 +1,66 @@
-h1 {
-  color : rgb(94, 37, 37)
+html {
+  font-size: 10px;
+  font-family: 'Calibri', sans-serif;
 }
 
-li {
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+
+html {
+  background-color: white;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: rgb(94, 37, 37);
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   color: black;
 }
 
-.test_class {
-  color: orange;
-  font-weight: bold;
-}
-/* to specify objects with that class name*/
-li.special {
-  color: green;
+li {
+  float: left;
 }
 
-p.special {
-  width: 25%
+li:last-child {
+  border-right: none;
 }
 
-.container {
-  display: flex;
-  align-items: center;
+li a {
+  display: block;
+  color: red;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
