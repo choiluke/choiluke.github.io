@@ -1,6 +1,6 @@
 html {
   font-size: .625em;
-  font-family: 'Calibri', sans-serif;
+  font-family: 'Calibri';
 }
 
 
@@ -63,4 +63,9 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
