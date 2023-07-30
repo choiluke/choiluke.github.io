@@ -1,27 +1,15 @@
-let slideIndex = 0;
+var slideIndex = 0;
 const slides = document.getElementsByClassName("slide");
 
-function showSlide(index) {
-  if (index < 0) {
-    slideIndex = slides.length - 1;
-  } else if (index >= slides.length) {
-    slideIndex = 0;
-  }
+function showSlide() {
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
   slides[slideIndex].style.display = "block";
+  console.log(slideIndex);
+  slideIndex = (slideIndex + 1) % slides.length;
 }
 
-function nextSlide() {
-  showSlide(slideIndex + 1);
-}
-
-function prevSlide() {
-  showSlide(slideIndex - 1);
-}
-
-// Automatically advance the slideshow every 3 seconds (adjust as needed).
-setInterval(nextSlide, 3000);
+setInterval(showSlide, 3000);
