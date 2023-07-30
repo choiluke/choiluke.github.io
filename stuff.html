@@ -26,10 +26,10 @@
       <div>
         <div>
           <h1>an assortment of stuff!</h1>
-        <div class="w3-content w3-section">
-          <img class="slideshow" src= "images/tonton.png"/>
-          <img class="slideshow" src= "images/g40.PNG"/>
-          <img class="slideshow" src= "images/1230_meme.jpg"/>
+        <div class="slideshow-container">
+          <img class="slide" src= "images/tonton.png"/>
+          <img class="slide" src= "images/g40.PNG"/>
+          <img class="slide" src= "images/1230_meme.jpg"/>
           <div><p>
             here's some random stuff!
           </p></div>
@@ -39,7 +39,7 @@
 
       <script>
         var curr = 0;
-        var img_arr = document.getElementsByClassName("slideshow");
+        var img_arr = document.getElementsByClassName("slide");
 
         auto_next();
 

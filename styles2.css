@@ -58,3 +58,20 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
+
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
