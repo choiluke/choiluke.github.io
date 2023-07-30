@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" href="images/tonton.png" type="image/x-icon" />
         <link rel="stylesheet" href="styles.css"/>
-        <script src="slideshow_script.js" defer></script>
+        <style>
+          .slideshow {display:none;}
+        </style>
         <!--
             to add javascript
             <script src="js code" defer></script> defer means load html then script
@@ -24,7 +26,7 @@
       <div>
         <div>
           <h1>an assortment of stuff!</h1>
-        <div>
+        <div class="w3-content w3-section">
           <img class="slideshow" src= "images/tonton.png"/>
           <img class="slideshow" src= "images/g40.PNG"/>
           <img class="slideshow" src= "images/1230_meme.jpg"/>
@@ -34,5 +36,22 @@
         </div>
         </div>
       </div>
+
+      <script>
+        var curr = 0;
+        var img_arr = document.getElementsByClassName("slideshow");
+
+        auto_next();
+
+        function autonext() {
+          var iter;
+          for (iter = 0; iter < img_arr.length; iter++) {
+            img_arr[iter].style.display = "none";
+          }
+          img_arr[curr].style.display = "block";
+          curr = (curr + 1) % img_arr.length;
+          setTimeout(autonext, 4000);
+        }
+      </script>
     </body>
 </html>
