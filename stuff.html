@@ -8,7 +8,7 @@
         <link rel="icon" href="images/tonton.png" type="image/x-icon" />
         <link rel="stylesheet" href="styles2.css"/>
         <style>
-          .slideshow {display:none;}
+          .slide {display:none;}
         </style>
         <!--
             to add javascript
@@ -27,31 +27,22 @@
         <div>
           <h1>an assortment of stuff!</h1>
         <div class="slideshow-container">
-          <img class="slide" src= "images/tonton.png"/>
-          <img class="slide" src= "images/g40.PNG"/>
-          <img class="slide" src= "images/1230_meme.jpg"/>
+          "hello"
+          <div class="slide">
+            <img src= "images/tonton.png" alt="im1"/>
+          </div>
+          <div class="slide">
+            <img src= "images/g40.PNG" alt="im2"/>
+          </div>
+          <div class="slide">
+            <img src= "images/1230_meme.jpg" alt="im3"/>
+          </div>
           <div><p>
             here's some random stuff!
           </p></div>
         </div>
         </div>
       </div>
-
-      <script>
-        var curr = 0;
-        var img_arr = document.getElementsByClassName("slide");
-
-        auto_next();
-
-        function autonext() {
-          var iter;
-          for (iter = 0; iter < img_arr.length; iter++) {
-            img_arr[iter].style.display = "none";
-          }
-          img_arr[curr].style.display = "block";
-          curr = (curr + 1) % img_arr.length;
-          setTimeout(autonext, 4000);
-        }
-      </script>
+      <script src="slideshow_script.js"></script>
     </body>
 </html>

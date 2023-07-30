@@ -1,14 +1,27 @@
-var curr = 0;
-var img_arr = document.getElementsByClassName("slideshow");
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
 
-auto_next();
-
-function autonext() {
-  var iter;
-  for (iter = 0; iter < img_arr.length; iter++) {
-    img_arr[iter].style.display = "none";
+function showSlide(index) {
+  if (index < 0) {
+    slideIndex = slides.length - 1;
+  } else if (index >= slides.length) {
+    slideIndex = 0;
   }
-  img_arr[curr].style.display = "block";
-  curr = (curr + 1) % img_arr.length;
-  setTimeout(autonext, 4000);
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex].style.display = "block";
 }
+
+function nextSlide() {
+  showSlide(slideIndex + 1);
+}
+
+function prevSlide() {
+  showSlide(slideIndex - 1);
+}
+
+// Automatically advance the slideshow every 3 seconds (adjust as needed).
+setInterval(nextSlide, 3000);
